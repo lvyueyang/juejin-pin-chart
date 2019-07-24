@@ -1,0 +1,211 @@
+.jj-char-wrapper {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 450px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px #ccc;
+  z-index: 2019;
+  font-size: 16px;
+  background-color: #fff;
+}
+.jj-char-wrapper * {
+  box-sizing: border-box;
+}
+.jj-char-wrapper .jj-header {
+  background-color: #007fff;
+  color: #fff;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0 10px;
+}
+.jj-char-wrapper .jj-header .name {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.jj-char-wrapper .jj-header .icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.jj-char-wrapper .jj-header .icon:hover {
+  background: #079cff;
+}
+.jj-char-wrapper .jj-header .max-window {
+  display: none;
+}
+.jj-char-wrapper .jj-header .operate {
+  display: flex;
+  flex: 0 0 100px;
+  justify-content: flex-end;
+}
+.jj-char-wrapper .jj-header .operate svg {
+  width: 20px;
+  height: 20px;
+}
+.jj-char-wrapper .jj-body {
+  height: 70vh;
+  background-color: #eee;
+  border-bottom: 5px solid #eee;
+  overflow-y: auto;
+}
+.jj-char-wrapper .jj-body .item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px;
+}
+.jj-char-wrapper .jj-body .item .avatar {
+  width: 45px;
+  height: 45px;
+  flex: 0 0 45px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.jj-char-wrapper .jj-body .item .avatar img {
+  display: block;
+  width: 100%;
+}
+.jj-char-wrapper .jj-body .item .info-wrapper {
+  flex: 1;
+}
+.jj-char-wrapper .jj-body .item .name-info {
+  padding-left: 8px;
+  font-size: 14px;
+  color: #333;
+}
+.jj-char-wrapper .jj-body .item .name-info a {
+  color: #333;
+  text-decoration: none;
+}
+.jj-char-wrapper .jj-body .item .name-info .position {
+  color: #999;
+}
+.jj-char-wrapper .jj-body .item .content {
+  position: relative;
+  padding: 10px;
+  margin: 10px 8px;
+  background-color: #fff;
+  border-radius: 3px;
+  display: inline-block;
+  max-width: 100%;
+}
+.jj-char-wrapper .jj-body .item .content .at-user {
+  padding-right: 10px;
+  color: #007fff;
+}
+.jj-char-wrapper .jj-body .item .content:after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  top: -15px;
+  left: 10px;
+  border: 8px solid transparent;
+  border-bottom-color: #fff;
+}
+.jj-char-wrapper .jj-body .item .content .text {
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  width: 100%;
+  word-break: break-all;
+  white-space: normal;
+}
+.jj-char-wrapper .jj-body .item .content .img-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.jj-char-wrapper .jj-body .item .content .img-wrapper .img {
+  flex: 0 0 120px;
+  cursor: zoom-in;
+}
+.jj-char-wrapper .jj-body .item .content .img-wrapper img {
+  width: 120px;
+  display: block;
+}
+.jj-char-wrapper .jj-body .item.me {
+  justify-content: flex-end;
+}
+.jj-char-wrapper .jj-body .item.me .avatar {
+  order: 1;
+}
+.jj-char-wrapper .jj-body .item.me .info-wrapper {
+  flex: 2;
+  text-align: right;
+}
+.jj-char-wrapper .jj-body .item.me .name-info {
+  text-align: right;
+  padding-right: 10px;
+}
+.jj-char-wrapper .jj-body .item.me .content {
+  text-align: left;
+}
+.jj-char-wrapper .jj-body .item.me .content:after {
+  right: 10px;
+  left: auto;
+}
+.jj-char-wrapper .jj-form {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.jj-char-wrapper .jj-form textarea {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  resize: none;
+  height: 80px;
+  outline: none;
+  font-size: 16px;
+  display: block;
+}
+.jj-char-wrapper .jj-form .operate {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.jj-char-wrapper .jj-form .operate .icon {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  cursor: pointer;
+}
+.jj-char-wrapper .jj-form button {
+  width: 100px;
+  height: 35px;
+  border: none;
+  background: #007fff;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+.jj-char-wrapper .jj-form button:hover,
+.jj-char-wrapper .jj-form button:active {
+  background: #079cff;
+}
+.jj-char-wrapper.min-window {
+  width: 300px;
+}
+.jj-char-wrapper.min-window .jj-body,
+.jj-char-wrapper.min-window .jj-form {
+  display: none;
+}
+.jj-char-wrapper.min-window .max-window {
+  display: flex;
+}
+.jj-char-wrapper.min-window .min-window {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
